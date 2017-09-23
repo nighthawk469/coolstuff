@@ -1,6 +1,4 @@
 {
-
-
 	"jobs":[
 		{
 			"id":1,
@@ -18,7 +16,7 @@
 			"Location":["New York,New York,United States"],
 			"jobType":["Full Time"]
 		}
-	], 
+	],
 
 
 
@@ -38,8 +36,6 @@
 			"Location":["New York,New York,United States","Toronto,Ontario,Canada"],
 			"jobType":["Full Time"]
 		}
-	], 
-
-
+	]
 
 }
