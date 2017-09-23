@@ -3,15 +3,12 @@
 		{
 			"id":1,
 			"jobTitle":"Software Engineer",
-			"General":["Business Trend Awareness","Communication","Perform Effectively in a Deadline Environment",
-,"Problem Solving","Results Oriented"],
+			"General":["Business Trend Awareness","Communication","Perform Effectively in a Deadline Environment","Problem Solving","Results Oriented"],
 			"Technical":["Debugging","Design","Development"],
 			"Tools":["c++","Perl"],
 			"Years":["0-2","3-5"],
 			"Category":["Technology"],
-			"Workstyle":["Autonomously", 
-"Collaboratively","with engineers",
-"with standard work hours","with medium size team(6-12)"],
+			"Workstyle":["Autonomously", "Collaboratively","with engineers", "with standard work hours","with medium size team(6-12)"],
 			"Education":["bachelor"],
 			"Location":["New York,New York,United States"],
 			"jobType":["Full Time"]
@@ -30,8 +27,7 @@
 			"Tools":["c++","Perl","Python"],
 			"Years":["0-2"],
 			"Category":["Technology"],
-			"Workstyle":["Autonomously","with engineers",
-"with standard work hours","with small siez team(2-5)","with medium size team(6-12)"],
+			"Workstyle":["Autonomously","with engineers","with standard work hours","with small siez team(2-5)","with medium size team(6-12)"],
 			"Education":["bachelor"],
 			"Location":["New York,New York,United States","Toronto,Ontario,Canada"],
 			"jobType":["Full Time"]
