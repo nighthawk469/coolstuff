@@ -1,0 +1,52 @@
+Languages
+
+Java
+C
+C++
+C#
+Python
+PHP
+JavaScript
+Visual Basic .NET
+Perl
+Ruby
+R
+Delphi/Object Pascal	
+Swift	
+Visual Basic	
+Assembly language	
+MATLAB	
+Go	
+Objective-C	
+PL/SQL	
+Scratch
+SAS	
+Dart
+D
+Transact-SQL
+ABAP
+COBOL
+(Visual) FoxPro
+Scala
+Fortran
+Ada
+Crystal
+Erlang
+Lisp
+Awk
+Lua
+VBScript
+F#	
+Alice	
+Prolog	
+LabVIEW	
+Logo	
+VHDL	
+Hack	
+Ladder Logic	
+Verilog	
+Apex	
+Julia	
+ML	
+Rust	
+PowerShell
