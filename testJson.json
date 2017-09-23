@@ -1,0 +1,38 @@
+{
+
+
+	"jobs":[
+		{
+			"id":
+			"General":[],
+			"Technical":["Information Technology"],
+			"Tools":["c++","Perl"],
+			"Years":["0-2"],,
+			"Category":["Technology"],
+			"Workstyle":[],
+			"Education":["bachelor"],
+			"Location":[],
+			"jobType":[]
+		}
+	], 
+
+
+
+	"users":[
+		{
+			"id":
+			"General":[],
+			"Technical":["Information Technology"],
+			"Tools":["c++","Perl"],
+			"Years":["0-2"],,
+			"Category":["Technology"],
+			"Workstyle":[],
+			"Education":["bachelor"],
+			"Location":[],
+			"jobType":[]
+		}
+	], 
+
+
+
+}
