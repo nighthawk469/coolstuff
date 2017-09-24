@@ -3,6 +3,7 @@ import sys, os
 import numpy as np
 import pandas as pd
 import json
+from sklearn.externals import joblib
 
 app = Flask(__name__)
 
@@ -20,8 +21,10 @@ def home():
         location_options = []
         job_type_options = []
 
-        options = [general_skills_options, technical_skills_options, tools_options,
-                   years_of_experience_options, category_options, work_env_options,
+        options = [general_skills_options, technical_skills_options,
+                   tools_options,
+                   years_of_experience_options, category_options,
+                   work_env_options,
                    edu_options, location_options, job_type_options]
 
         files = ['General skills.txt', 'Technical skills.txt', 'Languages.txt',
@@ -58,10 +61,10 @@ def home():
                 columns.append(line)
 
         user_features = pd.DataFrame(0, index=np.zeros(1), columns=columns)
-        keywords=[]
+        keywords = []
 
-        for i in range(1,10):
-            selections=request.form.getlist('question' + str(i))
+        for i in range(1, 10):
+            selections = request.form.getlist('question' + str(i))
             for selection in selections:
                 # assign 1 in pandas dataframe
                 user_features[selection] = 1
@@ -72,24 +75,37 @@ def home():
         # feed user_features into machine learning model
         ml_data = user_features.as_matrix()
 
-        # keywords the user chose
-        return str(keywords)
+        preds = my_model.predict_proba(ml_data)[0]
+        classes = ['A', 'B', 'C', 'D', 'E']
+        top_indices = preds.argsort()[::-1][:4]
+
+        options = {
+            "jobs": keywords_to_jobs(keywords),
+            "preds": preds,
+            "classes": classes,
+            "top_indices": top_indices,
+        }
+
+        # return str(preds)
+
+        return render_template('results.html', options=options)
 
 
-@app.route('/as')
-def results():
-    jobs = keywords_to_jobs()
-    return render_template('results.html', jobs=jobs)
+#
+# @app.route('/as')
+# def results():
+#     jobs = keywords_to_jobs()
+#     return render_template('results.html', jobs=jobs)
 
 
 
-def keywords_to_jobs():
+def keywords_to_jobs(keywords):
     jobs = []
 
-    with open("jobs.json") as f:
+    with open(os.path.join(app.root_path,"jobs.json")) as f:
         jobs_dict = json.load(f)
 
-    keywords = ['Java','Python','C++']
+    # keywords = ['Java', 'Python', 'C++']
 
     for keyword in keywords:
         if keyword in jobs_dict:
@@ -99,4 +115,5 @@ def keywords_to_jobs():
 
 
 if __name__ == '__main__':
+    my_model = joblib.load(os.path.join(app.root_path,'team_pred_model.pkl'))
     app.run()
