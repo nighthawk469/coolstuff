@@ -1,5 +1,3 @@
-Languages
-
 Java
 C
 C++

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link rel="stylesheet" href="../static/css/form.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <h2 style="text-align: center">FutureMe</h2>
+
+        <form class="col s8 offset-s2" method="post"
+              action={{ url_for('home') }}>
+
+            <div id="question1" class="input-field col s12">
+                <select multiple name="question1">
+                    <option value="" disabled selected>Choose your option
+                    </option>
+                    {% for o in options[0] %}
+                        <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
+                <label>General: I'm confident in my:</label>
+            </div>
+            <a id='question1nextbtn'
+               class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
+
+            <div id="question2" style="display: none"
+                 class="input-field col s12">
+                <select multiple name="question2">
+                    <option value="" disabled selected>Choose your option
+                    </option>
+                    {% for o in options[1] %}
+                        <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
+                <label>Technical: I've recently been working primarily
+                    on:</label>
+            </div>
+            <a id='question2nextbtn' style='display:none'
+               class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
+
+            <div id="question3" style="display: none"
+                 class="input-field col s12">
+                <select multiple name="question3">
+                    <option value="" disabled selected>Choose your option
+                    </option>
+                    {% for o in options[2] %}
+                        <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
+                <label>Tools: The tools I use the most are:</label>
+            </div>
+            <a id='question3nextbtn' style='display:none'
+               class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
+
+            <div id="question4" style="display: none"
+                 class="input-field col s12">
+                <select name="question4">
+                    <option value="" disabled selected>Choose your option
+                    </option>
+                    {% for o in options[3] %}
+                        <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
+                <label>Years: My background in this knowledge is
+                    between </label>
+            </div>
+            <a id='question4nextbtn' style='display:none'
+               class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
+
+            <div id="question5" style="display: none"
+                 class="input-field col s12">
+                <select multiple name="question5">
+                    <option value="" disabled selected>Choose your option
+                    </option>
+                    {% for o in options[4] %}
+                        <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
+                <label>Category: What roles interest you the most?</label>
+            </div>
+            <a id='question5nextbtn' style='display:none'
+               class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
+
+
+            <div id="question6" style="display: none"
+                 class="input-field col s12">
+                <select multiple name="question6">
+                    <option value="" disabled selected>Choose your option
+                    </option>
+                    {% for o in options[5] %}
+                        <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
+                <label>Work Environment: Which environments fit you the
+                    most?</label>
+            </div>
+            <a id='question6nextbtn' style='display:none'
+               class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
+
+            <div id="question7" style="display: none"
+                 class="input-field col s12">
+                <select name="question7">
+                    <option value="" disabled selected>Choose your option
+                    </option>
+                    {% for o in options[6] %}
+                        <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
+                <label>Education: What's your highest level of
+                    education?</label>
+            </div>
+            <a id='question7nextbtn' style='display:none'
+               class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
+
+            <div id="question8" style="display: none"
+                 class="input-field col s12">
+                <select name="question8">
+                    <option value="" disabled selected>Choose your option
+                    </option>
+                    {% for o in options[7] %}
+                        <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
+                <label>Location: Where are you?</label>
+            </div>
+            <a id='question8nextbtn' style='display:none'
+               class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
+
+            <div id="question9" style="display: none"
+                 class="input-field col s12">
+                <select name="question9">
+                    <option value="" disabled selected>Choose your option
+                    </option>
+                    {% for o in options[8] %}
+                        <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
+                <label>Job Type: I'm looking for a ___ role</label>
+            </div>
+
+            <button id='question9nextbtn' class="btn waves-effect waves-light"
+                    style="display: none;margin: 0 auto;"
+                    type="submit"
+                    name="action">Analyze
+                <i class="material-icons right">send</i>
+            </button>
+
+        </form>
+    </div>
+</div>
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript"
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="../static/js/app.js"></script>
+</body>
+</html>

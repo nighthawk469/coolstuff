@@ -1,4 +1,2 @@
-Location
-
 Toronto,Ontario,Canada
 New York,New York,United States
