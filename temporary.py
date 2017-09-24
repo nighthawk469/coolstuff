@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import sys, os
 import numpy as np
 import pandas as pd
+import json
 
 app = Flask(__name__)
 
@@ -73,6 +74,28 @@ def home():
 
         # keywords the user chose
         return str(keywords)
+
+
+@app.route('/as')
+def results():
+    jobs = keywords_to_jobs()
+    return render_template('results.html', jobs=jobs)
+
+
+
+def keywords_to_jobs():
+    jobs = []
+
+    with open("jobs.json") as f:
+        jobs_dict = json.load(f)
+
+    keywords = ['Java','Python','C++']
+
+    for keyword in keywords:
+        if keyword in jobs_dict:
+            jobs.append(jobs_dict[keyword])
+
+    return jobs
 
 
 if __name__ == '__main__':

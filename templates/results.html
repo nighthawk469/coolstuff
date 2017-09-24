@@ -18,7 +18,7 @@
 
 <body>
   <nav class="indigo darken-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">RBC 🦄</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
@@ -122,8 +122,24 @@
 
     </div>
 
+    <h3>Relevant Jobs</h3>
+    <div class="row">
+    {% for job in jobs %}
+      <div class="col s12 m4">
+        <div class="card blue">
+          <div class="card-content white-text">
+            <span class="card-title">{{job.job_name}}</span>
+            <p>{{job.location}}</p>
+          </div>
+          <div class="card-action">
+            <a href="{{job.url}}">Go to job application</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 
-    <br>
+    <!-- <br>
     <h3>Relevant Jobs</h3>
     <div class="row">
       <div class="col s12 m4">
@@ -161,7 +177,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 

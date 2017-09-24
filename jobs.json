@@ -1,0 +1,20 @@
+{
+  "Python": {
+    "keyword": "Python",
+    "job_name": "Data Scientist",
+    "location": "Mississauga, Ontario, Canada",
+    "url": "https://jobs.rbc.com/ca/en/job/RBCAA008815691/Data-Scientist"
+  },
+  "Java": {
+    "keyword": "Java",
+    "job_name": "Java Developer",
+    "location": "Toronto, Ontario, Canada",
+    "url": "https://jobs.rbc.com/ca/en/job/RBCAA008816610/Java-Developer"
+  },
+  "C++": {
+    "keyword": "C++",
+    "job_name": "Job Title Security Software Engineer",
+    "location": "Toronto, Ontario, Canada",
+    "url": "https://jobs.rbc.com/ca/en/job/RBCAA008815112/Security-Software-Engineer"
+  }
+}
