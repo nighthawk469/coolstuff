@@ -17,22 +17,22 @@
     "location": "Toronto, Ontario, Canada",
     "url": "https://jobs.rbc.com/ca/en/job/RBCAA008815112/Security-Software-Engineer"
   },
-  "C++": {
+  "Customer Support": {
     "keyword": "Customer Support",
     "job_name": "Customer Service Representative",
     "location": "Montreal, Quebec, Canada",
     "url": "https://jobs.rbc.com/ca/en/job/RBCAA008818170/Customer-Service-Representative"
   },
-  "C++": {
+  "Risk Management": {
     "keyword": "Risk Management",
     "job_name": "Job Title Risk Identification Analyst/Associate",
     "location": "New York, New York, United States",
     "url": "https://jobs.rbc.com/ca/en/job/RBCAA008810421/Risk-Identification-Analyst-Associate"
   },
-  "C++": {
+  "Business Storytelling": {
     "keyword": "Business Storytelling",
     "job_name": "Associate Director, Murex Business Analyst",
     "location": "Toronto, Ontario, Canada",
     "url": "https://jobs.rbc.com/ca/en/job/RBCAA008816614/Associate-Director-Murex-Business-Analyst"
-  },
+  }
 }
