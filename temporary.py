@@ -76,13 +76,25 @@ def home():
         ml_data = user_features.as_matrix()
 
         preds = my_model.predict_proba(ml_data)[0]
-        classes = ['A', 'B', 'C', 'D', 'E']
+        classes = ['Wealth Management Financial Services team',
+                   'Capital Markets Technology Governmence team',
+                   'RBC Investor and Treasury Services Advanced Client Experience Team',
+                   'RBC’s Global Communication Services|Service Delivery Provisioning Team',
+                   'Capital Markets Global Equity-Linked Products Business Group']
+        technologies = [
+            ["Sales Experience", "Customer Service", "Insurance & Financial Planning"],
+            ["Enterprise Architecture", "Technology Risks", "Python & Javascript"],
+            ["Big Data", "Database Management", "Spark & Hadoop"],
+            ["Database Management", "Project Coordination", "Microsoft Office Products (Outlook, Word, Excel)"],
+            ["Workflow Automation", "Testing & Quality Assurance", "Java, Python & Perl"]
+        ]
         top_indices = preds.argsort()[::-1][:4]
 
         options = {
             "jobs": keywords_to_jobs(keywords),
             "preds": preds,
             "classes": classes,
+            "technologies":technologies,
             "top_indices": top_indices,
         }
 
@@ -105,7 +117,7 @@ def keywords_to_jobs(keywords):
     with open(os.path.join(app.root_path,"jobs.json")) as f:
         jobs_dict = json.load(f)
 
-    # keywords = ['Java', 'Python', 'C++']
+    # keywords = ['Java', 'Python','Python','Python','Python','Python', 'C++']
 
     for keyword in keywords:
         if keyword in jobs_dict:

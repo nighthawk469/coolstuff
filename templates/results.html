@@ -89,9 +89,9 @@
             <span>
               <h4>Technologies</h4>
               <ul class="collection">
-                <li class="collection-item">Apache Storm</li>
-                <li class="collection-item">AngularJS</li>
-                <li class="collection-item">MEAN Stack</li>
+                  {% for technology in options["technologies"][top_indice] %}
+                      <li class="collection-item">{{ technology }}</li>
+                  {% endfor %}
               </ul>
             </span></div>
                 </li>
