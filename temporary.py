@@ -73,6 +73,8 @@ def home():
         # feed user_features into machine learning model
         ml_data = user_features.as_matrix()
 
+        my_model = joblib.load(os.path.join(app.root_path,'team_pred_model.pkl'))
+
         preds = my_model.predict_proba(ml_data)[0]
         classes = ['Wealth Management Financial Services team',
                    'Capital Markets Technology Governmence team',
@@ -107,10 +109,10 @@ def home():
         return render_template('results.html', options=options)
 
 
-#
+
 # @app.route('/as')
 # def results():
-#     jobs = keywords_to_jobs()
+#     jobs = keywords_to_jobs(['Java', 'Python','Python','Python','Python','Python', 'C++'])
 #     return render_template('results.html', jobs=jobs)
 
 
@@ -131,5 +133,4 @@ def keywords_to_jobs(keywords):
 
 
 if __name__ == '__main__':
-    my_model = joblib.load(os.path.join(app.root_path,'team_pred_model.pkl'))
     app.run()
