@@ -40,6 +40,8 @@
               action={{ url_for('home') }}>
 
             <div id="question1" class="input-field col s12">
+                <h5 class="black-text">💃 I'm confident in my...</h5>
+
                 <select multiple name="question1">
                     <option value="" disabled selected>Choose your option
                     </option>
@@ -47,13 +49,15 @@
                         <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-                <label>General: I'm confident in my:</label>
+
             </div>
             <a id='question1nextbtn'
                class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
 
             <div id="question2" style="display: none"
                  class="input-field col s12">
+                 <h5 class="black-text">✍️ I've recently been working primarily
+                     on...</h5>
                 <select multiple name="question2">
                     <option value="" disabled selected>Choose your option
                     </option>
@@ -61,14 +65,14 @@
                         <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-                <label>Technical: I've recently been working primarily
-                    on:</label>
+
             </div>
             <a id='question2nextbtn' style='display:none'
                class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
 
             <div id="question3" style="display: none"
                  class="input-field col s12">
+                 <h5 class="black-text">👩‍💻 The tools I use the most are...</h5>
                 <select multiple name="question3">
                     <option value="" disabled selected>Choose your option
                     </option>
@@ -76,13 +80,13 @@
                         <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-                <label>Tools: The tools I use the most are:</label>
+
             </div>
             <a id='question3nextbtn' style='display:none'
                class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
 
-            <div id="question4" style="display: none"
-                 class="input-field col s12">
+            <div id="question4" style="display: none" class="input-field col s12">
+                 <h5 class="black-text">🗓 My background in this knowledge is between...years</h5>
                 <select name="question4">
                     <option value="" disabled selected>Choose your option
                     </option>
@@ -90,14 +94,13 @@
                         <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-                <label>Years: My background in this knowledge is
-                    between </label>
+
             </div>
             <a id='question4nextbtn' style='display:none'
                class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
 
-            <div id="question5" style="display: none"
-                 class="input-field col s12">
+            <div id="question5" style="display: none" class="input-field col s12">
+                 <h5 class="black-text">👨‍🔬 What roles interest you the most?</h5>
                 <select multiple name="question5">
                     <option value="" disabled selected>Choose your option
                     </option>
@@ -105,14 +108,13 @@
                         <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-                <label>Category: What roles interest you the most?</label>
             </div>
             <a id='question5nextbtn' style='display:none'
                class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
 
 
-            <div id="question6" style="display: none"
-                 class="input-field col s12">
+            <div id="question6" style="display: none" class="input-field col s12">
+                 <h5 class="black-text">🏢 Which environments fit you the most?</h5>
                 <select multiple name="question6">
                     <option value="" disabled selected>Choose your option
                     </option>
@@ -120,14 +122,12 @@
                         <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-                <label>Work Environment: Which environments fit you the
-                    most?</label>
             </div>
             <a id='question6nextbtn' style='display:none'
                class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
 
-            <div id="question7" style="display: none"
-                 class="input-field col s12">
+            <div id="question7" style="display: none" class="input-field col s12">
+                 <h5 class="black-text">👩‍🎓 What's your highest level of education?</h5>
                 <select name="question7">
                     <option value="" disabled selected>Choose your option
                     </option>
@@ -135,14 +135,12 @@
                         <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-                <label>Education: What's your highest level of
-                    education?</label>
             </div>
             <a id='question7nextbtn' style='display:none'
                class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
 
-            <div id="question8" style="display: none"
-                 class="input-field col s12">
+            <div id="question8" style="display: none" class="input-field col s12">
+                 <h5 class="black-text">🌏 Where are you?</h5>
                 <select name="question8">
                     <option value="" disabled selected>Choose your option
                     </option>
@@ -150,13 +148,12 @@
                         <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-                <label>Location: Where are you?</label>
             </div>
             <a id='question8nextbtn' style='display:none'
                class="waves-effect waves-light btn"><i class="material-icons right">chevron_right</i>Next</a>
 
-            <div id="question9" style="display: none"
-                 class="input-field col s12">
+            <div id="question9" style="display: none" class="input-field col s12">
+                 <h5 class="black-text">⌛️ I'm looking for a ___ role</h5>
                 <select name="question9">
                     <option value="" disabled selected>Choose your option
                     </option>
@@ -164,7 +161,6 @@
                         <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-                <label>Job Type: I'm looking for a ___ role</label>
             </div>
 
             <button id='question9nextbtn' class="btn waves-effect waves-light"
