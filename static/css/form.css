@@ -1,6 +1,6 @@
 body {
-    background-color: #283593;
-    color: #fdd835;
+    /*background-color: #283593;*/
+    color: #283593;
 }
 
 label {
@@ -8,5 +8,11 @@ label {
 }
 
 button {
-    background-color:#fdd835;
+}
+
+#question1nextbtn, #question2nextbtn, #question3nextbtn,
+#question4nextbtn, #question5nextbtn, #question6nextbtn,
+#question7nextbtn, #question8nextbtn, #question9nextbtn {
+    background-color: #283593;
+    color: #fdd835;
 }
