@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-Up/Login Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600'
+          rel='stylesheet' type='text/css'>
+    {#    <link rel="stylesheet"#}
+    {#          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">#}
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <link rel="stylesheet" href="../static/css/form.css"/>
+
+
+</head>
+
+<body>
+
+
+<nav class="indigo darken-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#"
+                                          class="brand-logo">RBC 🦄</a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i
+                class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<div class="form">
+
+    <ul class="tab-group">
+        <li class="tab active"><a href="#signup">New employee</a></li>
+        <li class="tab"><a href="#login">Returning employee</a></li>
+    </ul>
+
+    <div class="tab-content">
+
+
+        <div id="signup">
+
+
+            <div class="row">
+{#                <h2 style="text-align: center">Future Me</h2>#}
+
+            <div style="text-align: center">
+                <img src="../static/logo.png"/>
+            </div>
+
+                <form class="col s8 offset-s2" method="post"
+                      action={{ url_for('home') }}>
+
+                    <div id="question1" class="input-field col s12">
+                        <h5 class="black-text">💃 I'm confident in my...</h5>
+
+                        <select multiple name="question1">
+                            <option value="" disabled selected>Choose
+                            </option>
+                            {% for o in options[0] %}
+                                <option value="{{ o }}">{{ o }}</option>
+                            {% endfor %}
+                        </select>
+
+                    </div>
+                    <a id='question1nextbtn'
+                       class="waves-effect waves-light btn">Next &gt;</a>
+
+                    <div id="question2" style="display: none"
+                         class="input-field col s12">
+                        <h5 class="black-text">✍️ I've recently been working
+                            primarily
+                            on...</h5>
+                        <select multiple name="question2">
+                            <option value="" disabled selected>Choose
+                            </option>
+                            {% for o in options[1] %}
+                                <option value="{{ o }}">{{ o }}</option>
+                            {% endfor %}
+                        </select>
+
+                    </div>
+                    <a id='question2nextbtn' style='display:none'
+                       class="waves-effect waves-light btn">Next &gt;</a>
+
+                    <div id="question3" style="display: none"
+                         class="input-field col s12">
+                        <h5 class="black-text">👩‍💻 The tools I use the most
+                            are...</h5>
+                        <select multiple name="question3">
+                            <option value="" disabled selected>Choose
+                            </option>
+                            {% for o in options[2] %}
+                                <option value="{{ o }}">{{ o }}</option>
+                            {% endfor %}
+                        </select>
+
+                    </div>
+                    <a id='question3nextbtn' style='display:none'
+                       class="waves-effect waves-light btn">Next &gt;</a>
+
+                    <div id="question4" style="display: none"
+                         class="input-field col s12">
+                        <h5 class="black-text">🗓 My background in this
+                            knowledge is...years</h5>
+                        <select name="question4">
+                            <option value="" disabled selected>Choose
+                            </option>
+                            {% for o in options[3] %}
+                                <option value="{{ o }}">{{ o }}</option>
+                            {% endfor %}
+                        </select>
+
+                    </div>
+                    <a id='question4nextbtn' style='display:none'
+                       class="waves-effect waves-light btn">Next &gt;</a>
+
+                    <div id="question5" style="display: none"
+                         class="input-field col s12">
+                        <h5 class="black-text">👨‍🔬 What roles interest you the
+                            most?</h5>
+                        <select multiple name="question5">
+                            <option value="" disabled selected>Choose
+                            </option>
+                            {% for o in options[4] %}
+                                <option value="{{ o }}">{{ o }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <a id='question5nextbtn' style='display:none'
+                       class="waves-effect waves-light btn">Next &gt;</a>
+
+
+                    <div id="question6" style="display: none"
+                         class="input-field col s12">
+                        <h5 class="black-text">🏢 Which environments fit you the
+                            most?</h5>
+                        <select multiple name="question6">
+                            <option value="" disabled selected>Choose
+                            </option>
+                            {% for o in options[5] %}
+                                <option value="{{ o }}">{{ o }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <a id='question6nextbtn' style='display:none'
+                       class="waves-effect waves-light btn">Next &gt;</a>
+
+                    <div id="question7" style="display: none"
+                         class="input-field col s12">
+                        <h5 class="black-text">👩‍🎓 What's your highest level
+                            of education?</h5>
+                        <select name="question7">
+                            <option value="" disabled selected>Choose
+                            </option>
+                            {% for o in options[6] %}
+                                <option value="{{ o }}">{{ o }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <a id='question7nextbtn' style='display:none'
+                       class="waves-effect waves-light btn">Next &gt;</a>
+
+                    <div id="question8" style="display: none"
+                         class="input-field col s12">
+                        <h5 class="black-text">🌏 Where are you?</h5>
+                        <select name="question8">
+                            <option value="" disabled selected>Choose
+                            </option>
+                            {% for o in options[7] %}
+                                <option value="{{ o }}">{{ o }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <a id='question8nextbtn' style='display:none'
+                       class="waves-effect waves-light btn">Next &gt;</a>
+
+                    <div id="question9" style="display: none"
+                         class="input-field col s12">
+                        <h5 class="black-text">⌛️ I'm looking for a ___
+                            role</h5>
+                        <select name="question9">
+                            <option value="" disabled selected>Choose
+                            </option>
+                            {% for o in options[8] %}
+                                <option value="{{ o }}">{{ o }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <button id='question9nextbtn'
+                            class="btn waves-effect waves-light"
+                            style="display: none;margin: 0 auto;"
+                            type="submit"
+                            name="action">Analyze &gt;
+                    </button>
+
+                </form>
+            </div>
+
+
+        </div>
+
+
+        <div id="login">
+
+            <div class="row">
+                <h2 style="text-align: center">Welcome Back!</h2>
+
+                <form class="col s8 offset-s2" method="post">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password"
+                                   class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+
+                    <button id='loginbtn'
+                            class="btn waves-effect waves-light"
+                            style="margin: 0 auto;"
+                            type="submit"
+                            name="action">Login &gt;
+                    </button>
+
+                </form>
+            </div>
+
+
+        </div>
+
+    </div><!-- tab-content -->
+
+</div> <!-- /form -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="../static/js/index.js"></script>
+
+<script src="../static/js/app.js"></script>
+
+</body>
+</html>

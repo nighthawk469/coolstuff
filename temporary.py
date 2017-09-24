@@ -41,7 +41,8 @@ def home():
                     continue
                 options[i].append(line)
 
-        return render_template('index.html', options=options)
+        # return render_template('index.html', options=options)
+        return render_template('exampleform.html', options=options)
 
     elif request.method == 'POST':
 
@@ -73,8 +74,6 @@ def home():
         # feed user_features into machine learning model
         ml_data = user_features.as_matrix()
 
-        my_model = joblib.load(os.path.join(app.root_path,'team_pred_model.pkl'))
-
         preds = my_model.predict_proba(ml_data)[0]
         classes = ['Wealth Management Financial Services team',
                    'Capital Markets Technology Governmence team',
@@ -82,11 +81,15 @@ def home():
                    'RBC’s Global Communication Services|Service Delivery Provisioning Team',
                    'Capital Markets Global Equity-Linked Products Business Group']
         technologies = [
-            ["Sales Experience", "Customer Service", "Insurance & Financial Planning"],
-            ["Enterprise Architecture", "Technology Risks", "Python & Javascript"],
+            ["Sales Experience", "Customer Service",
+             "Insurance & Financial Planning"],
+            ["Enterprise Architecture", "Technology Risks",
+             "Python & Javascript"],
             ["Big Data", "Database Management", "Spark & Hadoop"],
-            ["Database Management", "Project Coordination", "Microsoft Office Products (Outlook, Word, Excel)"],
-            ["Workflow Automation", "Testing & Quality Assurance", "Java, Python & Perl"]
+            ["Database Management", "Project Coordination",
+             "Microsoft Office Products (Outlook, Word, Excel)"],
+            ["Workflow Automation", "Testing & Quality Assurance",
+             "Java, Python & Perl"]
         ]
         top_indices = preds.argsort()[::-1][:4]
         # bunch of 4 random keywords
@@ -99,15 +102,14 @@ def home():
             "jobs": keywords_to_jobs(keywords),
             "preds": preds,
             "classes": classes,
-            "technologies":technologies,
+            "technologies": technologies,
             "top_indices": top_indices,
-            "top_keywords":random_keywords
+            "top_keywords": random_keywords
         }
 
         # return str(preds)
 
         return render_template('results.html', options=options)
-
 
 
 # @app.route('/as')
@@ -120,7 +122,7 @@ def home():
 def keywords_to_jobs(keywords):
     jobs = []
 
-    with open(os.path.join(app.root_path,"jobs.json")) as f:
+    with open(os.path.join(app.root_path, "jobs.json")) as f:
         jobs_dict = json.load(f)
 
     # keywords = ['Java', 'Python','Python','Python','Python','Python', 'C++']
@@ -133,4 +135,5 @@ def keywords_to_jobs(keywords):
 
 
 if __name__ == '__main__':
+    my_model = joblib.load(os.path.join(app.root_path, 'team_pred_model.pkl'))
     app.run()
