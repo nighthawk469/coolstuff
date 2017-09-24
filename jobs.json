@@ -1,33 +1,15 @@
 {
-  "Python": {
-    "keyword": "Python",
-    "job_name": "Data Scientist",
-    "location": "Mississauga, Ontario, Canada",
-    "url": "https://jobs.rbc.com/ca/en/job/RBCAA008815691/Data-Scientist"
-  },
   "Java": {
     "keyword": "Java",
     "job_name": "Java Developer",
     "location": "Toronto, Ontario, Canada",
     "url": "https://jobs.rbc.com/ca/en/job/RBCAA008816610/Java-Developer"
   },
-  "C++": {
-    "keyword": "C++",
-    "job_name": "Job Title Security Software Engineer",
-    "location": "Toronto, Ontario, Canada",
-    "url": "https://jobs.rbc.com/ca/en/job/RBCAA008815112/Security-Software-Engineer"
-  },
   "Customer Support": {
     "keyword": "Customer Support",
     "job_name": "Customer Service Representative",
     "location": "Montreal, Quebec, Canada",
     "url": "https://jobs.rbc.com/ca/en/job/RBCAA008818170/Customer-Service-Representative"
-  },
-  "Risk Management": {
-    "keyword": "Risk Management",
-    "job_name": "Job Title Risk Identification Analyst/Associate",
-    "location": "New York, New York, United States",
-    "url": "https://jobs.rbc.com/ca/en/job/RBCAA008810421/Risk-Identification-Analyst-Associate"
   },
   "Business Storytelling": {
     "keyword": "Business Storytelling",
