@@ -68,9 +68,7 @@ def home():
             for selection in selections:
                 # assign 1 in pandas dataframe
                 user_features[selection] = 1
-                # add ONLY TOOLS keywords
-                if i == 3:
-                    keywords.append(selection)
+                keywords.append(selection)
 
         # feed user_features into machine learning model
         ml_data = user_features.as_matrix()
@@ -89,6 +87,11 @@ def home():
             ["Workflow Automation", "Testing & Quality Assurance", "Java, Python & Perl"]
         ]
         top_indices = preds.argsort()[::-1][:4]
+        # bunch of 4 random keywords
+        random_keywords = keywords.copy()
+        from random import shuffle
+        shuffle(random_keywords)
+        random_keywords = random_keywords[:4]
 
         options = {
             "jobs": keywords_to_jobs(keywords),
@@ -96,6 +99,7 @@ def home():
             "classes": classes,
             "technologies":technologies,
             "top_indices": top_indices,
+            "top_keywords":random_keywords
         }
 
         # return str(preds)

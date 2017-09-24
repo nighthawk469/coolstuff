@@ -52,18 +52,11 @@
 
     <h3>Skills</h3>
     <div class="row">
-        <div class="col s12 m3">
-            <h5 class="center blue-text">Python</h5>
-        </div>
-        <div class="col s12 m3">
-            <h5 class="center blue-text">Big Data</h5>
-        </div>
-        <div class="col s12 m3">
-            <h5 class="center blue-text">Hadoop</h5>
-        </div>
-        <div class="col s12 m3">
-            <h5 class="center blue-text">OpenStack</h5>
-        </div>
+        {% for keyword in options["top_keywords"] %}
+            <div class="col s12 m3">
+                <h5 class="center blue-text">{{ keyword }}</h5>
+            </div>
+        {% endfor %}
     </div>
     <br>
 
