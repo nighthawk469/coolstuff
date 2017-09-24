@@ -32,6 +32,6 @@ def test_model():
 
 
 if __name__ == '__main__':
-    # train_model(LogisticRegressionCV)
+    train_model(LogisticRegressionCV)
     result = test_model()
     print(result)
