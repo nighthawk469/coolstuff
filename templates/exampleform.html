@@ -33,8 +33,8 @@
 <div class="form">
 
     <ul class="tab-group">
-        <li class="tab active"><a href="#signup">New employee</a></li>
-        <li class="tab"><a href="#login">Returning employee</a></li>
+        <li class="tab active"><a href="#signup">This is my first time</a></li>
+        <li class="tab"><a href="#login">This is not my first time</a></li>
     </ul>
 
     <div class="tab-content">
@@ -45,6 +45,7 @@
 
             <div class="row">
                 <h2 style="text-align: center">Future Me</h2>
+                <h3 id='findyourplace' style="text-align: center">Find your place</h3>
 
 {#            <div style="text-align: center">#}
 {#                <img src="../static/logo.png"/>#}
@@ -53,7 +54,13 @@
                 <form class="col s8 offset-s2" method="post"
                       action={{ url_for('home') }}>
 
-                    <div id="question1" class="input-field col s12">
+
+                    <a id='letsbegin' style="margin-top: 15px"
+                       class="waves-effect waves-light btn">Let's begin &gt;</a>
+
+
+
+                    <div id="question1" class="input-field col s12" style="display: none;">
                         <h5 class="black-text">💃 I'm confident in my...</h5>
 
                         <select multiple name="question1">
@@ -65,7 +72,7 @@
                         </select>
 
                     </div>
-                    <a id='question1nextbtn'
+                    <a id='question1nextbtn' style="display: none; margin-top: 15px"
                        class="waves-effect waves-light btn">Next &gt;</a>
 
                     <div id="question2" style="display: none"
@@ -82,7 +89,7 @@
                         </select>
 
                     </div>
-                    <a id='question2nextbtn' style='display:none'
+                    <a id='question2nextbtn' style='display:none; margin-top: 15px'
                        class="waves-effect waves-light btn">Next &gt;</a>
 
                     <div id="question3" style="display: none"
@@ -98,7 +105,7 @@
                         </select>
 
                     </div>
-                    <a id='question3nextbtn' style='display:none'
+                    <a id='question3nextbtn' style='display:none; margin-top: 15px'
                        class="waves-effect waves-light btn">Next &gt;</a>
 
                     <div id="question4" style="display: none"
@@ -114,7 +121,7 @@
                         </select>
 
                     </div>
-                    <a id='question4nextbtn' style='display:none'
+                    <a id='question4nextbtn' style='display:none; margin-top: 15px'
                        class="waves-effect waves-light btn">Next &gt;</a>
 
                     <div id="question5" style="display: none"
@@ -129,7 +136,7 @@
                             {% endfor %}
                         </select>
                     </div>
-                    <a id='question5nextbtn' style='display:none'
+                    <a id='question5nextbtn' style='display:none; margin-top: 15px'
                        class="waves-effect waves-light btn">Next &gt;</a>
 
 
@@ -145,7 +152,7 @@
                             {% endfor %}
                         </select>
                     </div>
-                    <a id='question6nextbtn' style='display:none'
+                    <a id='question6nextbtn' style='display:none; margin-top: 15px'
                        class="waves-effect waves-light btn">Next &gt;</a>
 
                     <div id="question7" style="display: none"
@@ -160,7 +167,7 @@
                             {% endfor %}
                         </select>
                     </div>
-                    <a id='question7nextbtn' style='display:none'
+                    <a id='question7nextbtn' style='display:none; margin-top: 15px'
                        class="waves-effect waves-light btn">Next &gt;</a>
 
                     <div id="question8" style="display: none"
@@ -174,7 +181,7 @@
                             {% endfor %}
                         </select>
                     </div>
-                    <a id='question8nextbtn' style='display:none'
+                    <a id='question8nextbtn' style='display:none; margin-top: 15px'
                        class="waves-effect waves-light btn">Next &gt;</a>
 
                     <div id="question9" style="display: none"

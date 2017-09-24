@@ -1,5 +1,12 @@
 $('select').material_select();
 
+$('#letsbegin').on('click', function () {
+    $('#letsbegin').css('display', 'none');
+    $('#question1').css('display', 'inline');
+    $('#question1nextbtn').css('display', 'inline-block');
+    $('#findyourplace').css('display', 'none')
+});
+
 $('#question1nextbtn').on('click', function () {
     $('#question1').css('display', 'none');
     $('#question1nextbtn').css('display', 'none');

@@ -12,7 +12,15 @@ button {
 
 #question1nextbtn, #question2nextbtn, #question3nextbtn,
 #question4nextbtn, #question5nextbtn, #question6nextbtn,
-#question7nextbtn, #question8nextbtn, #question9nextbtn, #loginbtn {
+#question7nextbtn, #question8nextbtn, #question9nextbtn, #loginbtn, #letsbegin {
     background-color: #283593;
 }
 
+form {
+    text-align: center;
+}
+
+
+h3 {
+    font-size: 22px;
+}
